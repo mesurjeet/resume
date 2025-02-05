@@ -809,7 +809,7 @@ h2 {
         top: auto !important;
         bottom: 20px !important;
         right: 20px !important;
-    }
+}
 
     .theme-switch {
         width: 50px !important;
@@ -817,11 +817,11 @@ h2 {
         border-radius: 50%;
         padding: 12px;
         justify-content: center;
-    }
+}
 
     .switch-handle {
         display: none !important;
-    }
+}
 
     .theme-icon {
         width: 24px !important;
