@@ -1,0 +1,1116 @@
+/* Global styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --text-color: #2c3e50;
+    --text-light: #666;
+    --border-color: #eaeaea;
+    --background-light: #f8f9fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                border-color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                box-shadow 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    padding: 50px 0 30px;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, p, li, a {
+    transition: color 0.3s ease !important;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+}
+
+/* Left Column */
+.left-column {
+    padding: 30px;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--background-light);
+}
+
+/* Right Column */
+.right-column {
+    padding: 30px;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 35px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    /* transform: translateY(-2px); */
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    border-bottom: 2px solid;
+    border-color: var(--primary-color);
+    padding-bottom: 8px;
+    font-weight: 600;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Contact section */
+.contact-details p,
+.contact-details a,
+.degree h3,
+.degree p,
+.degree li,
+.school h3,
+.school p {
+    transition: color 0.3s ease;  /* Faster transition for text */
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-details img.icon {
+    margin-right: 2px;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.contact-details span {
+    color: var(--text-light);
+}
+
+.contact-details a:hover {
+    color: var(--secondary-color);
+}
+
+/* Education section */
+.degree, .school {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    background: white;
+}
+
+.degree h3, .school h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.degree ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.degree li, .school p, .degree p {
+    margin-bottom: 5px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Technical Skills section */
+.skills-group {
+    margin-bottom: 20px;
+}
+
+.skills-group h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.skills-group ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.skills-group li {
+    margin-bottom: 6px;
+    color: var(--text-light);
+    padding: 4px 0;
+    font-size: 0.95rem;
+}
+
+/* Projects section */
+.project {
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(to right, rgba(41,98,255,0.03), transparent);
+    transition: all 0.3s ease;
+}
+
+.project h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project h3 img.icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.project h3 img.icon:hover {
+    transform: scale(1.1);
+}
+
+.project p, .job p {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project ul, .job ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.project li, .job li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.project li:before, .job li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Work Experience section */
+.job {
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(to right, rgba(41,98,255,0.03), transparent);
+    transition: all 0.3s ease;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.job h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.duration {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.company {
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.location {
+    float: right;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Coding Profiles section */
+.coding-profiles {
+    margin-bottom: 35px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.profiles-container {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.profile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.profile svg {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover svg {
+    transform: scale(1.1);
+}
+
+/* Hobbies section */
+.hobbies ul {
+    list-style: none;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobbies li {
+    background: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.2s ease;
+}
+
+.hobbies li:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+        margin: 10px;
+        margin-bottom: 100px;
+        border-radius: 12px;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 30px 15px 20px;
+    }
+
+    /* Theme switch mobile styles */
+    .theme-switch-wrapper {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+
+    .theme-switch {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        padding: 12px;
+        justify-content: center;
+    }
+
+    .switch-handle {
+        display: none !important;
+    }
+
+    .theme-icon {
+        width: 24px !important;
+        height: 24px !important;
+        position: absolute;
+    }
+
+    /* Download button mobile styles */
+    .download-button-wrapper {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+
+    .download-button {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        padding: 12px;
+    }
+
+    .download-text {
+        display: none !important;
+    }
+
+    .download-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    /* Layout adjustments */
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 380px) {
+    .theme-switch,
+    .download-button {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .theme-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .download-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .theme-switch-wrapper,
+    .download-button-wrapper {
+        bottom: 15px !important;
+    }
+}
+
+/* Safe area for newer mobile devices */
+@supports (padding: max(0px)) {
+    @media screen and (max-width: 768px) {
+        .theme-switch-wrapper,
+        .download-button-wrapper {
+            bottom: max(20px, env(safe-area-inset-bottom)) !important;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .theme-switch-wrapper {
+        top: 10px;
+    }
+
+    .download-button-wrapper {
+        top: 10px;
+    }
+
+    header {
+        padding: 70px 15px 15px;
+    }
+}
+
+/* Icon styles with colors */
+.icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    margin-right: 8px;
+}
+
+/* Specific icon colors and styles */
+.github-icon {
+    filter: brightness(0.2);
+    transition: filter 0.2s ease;
+}
+
+.github-icon:hover {
+    filter: brightness(0.5);
+}
+
+.linkedin-icon {
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Update link icon color to professional blue */
+.link-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    filter: invert(29%) sepia(93%) saturate(1789%) hue-rotate(197deg) brightness(94%) contrast(96%);  /* Professional blue #0066CC */
+}
+
+.link-icon:hover {
+    filter: invert(29%) sepia(93%) saturate(1789%) hue-rotate(197deg) brightness(114%) contrast(96%);
+    transform: scale(1.15);
+}
+
+/* Update video icon color to professional red */
+.video-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    filter: invert(21%) sepia(88%) saturate(3469%) hue-rotate(351deg) brightness(85%) contrast(92%);  /* Professional red #D32F2F */
+}
+
+.video-icon:hover {
+    filter: invert(21%) sepia(88%) saturate(3469%) hue-rotate(351deg) brightness(105%) contrast(92%);
+    transform: scale(1.15);
+}
+
+/* Contact details specific icon styling */
+.contact-details .icon {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Project icons hover effects */
+.project h3 .icon {
+    margin: 0;
+    margin-left: 6px;
+}
+
+.project h3 .link-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(90%) saturate(1960%) hue-rotate(201deg) brightness(94%) contrast(101%);  /* #0057B8 - Professional blue */
+    transition: all 0.2s ease;
+}
+
+.project h3 .link-icon:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(90%) saturate(1960%) hue-rotate(201deg) brightness(120%) contrast(101%);
+    transform: scale(1.15);
+}
+
+.project h3 .video-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(89%) contrast(97%);  /* #CC0000 - Professional red */
+    transition: all 0.2s ease;
+}
+
+.project h3 .video-icon:hover {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(110%) contrast(97%);
+    transform: scale(1.15);
+}
+
+/* Special styling for emoji icons */
+.icon:not(img) {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+}
+
+/* Icon hover effect and tooltip */
+[title] {
+    position: relative;
+}
+
+[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    z-index: 10;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--primary-color);
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Coding profiles icons */
+.coding-profiles .profile img {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover effects */
+.project:hover, .job:hover {
+    transform: translateX(5px);
+    background: linear-gradient(to right, rgba(41,98,255,0.05), transparent);
+}
+
+/* Project specific styles */
+.project > p:first-of-type {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Theme variables */
+:root[data-theme="light"] {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #2962ff;
+    --text-color: #1a1a1a;
+    --text-light: #4a4a4a;
+    --border-color: #e0e0e0;
+    --background-light: #f5f7fa;
+    --shadow-color: rgba(41, 98, 255, 0.1);
+    --gradient-start: #1a237e;
+    --gradient-end: #0d47a1;
+    --section-bg: #ffffff;
+    --header-text: #ffffff;
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #64b5f6;
+    --secondary-color: #42a5f5;
+    --accent-color: #2196f3;
+    --text-color: #e0e0e0;
+    --text-light: #b0b0b0;
+    --border-color: #424242;
+    --background-light: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --gradient-start: #1a1a1a;
+    --gradient-end: #2c2c2c;
+    --section-bg: #2c2c2c;
+    --header-text: #ffffff;
+}
+
+/* Theme transition */
+* {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Theme Switch Styles */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    width: 136px;
+    height: 51px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 26px;
+    padding: 6px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-icon {
+    width: 33px;
+    height: 33px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    margin: 0;
+    padding: 4px;
+}
+
+.switch-handle {
+    width: 39px;
+    height: 39px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop theme icon visibility */
+@media screen and (min-width: 769px) {
+    .theme-icon {
+        opacity: 1 !important;
+    }
+
+    [data-theme="dark"] .switch-handle {
+        transform: translate(85px, -50%);
+    }
+}
+
+/* Mobile theme icon visibility */
+@media screen and (max-width: 768px) {
+    [data-theme="light"] .light-icon {
+        opacity: 0;
+    }
+
+    [data-theme="light"] .dark-icon {
+        opacity: 1;
+    }
+
+    [data-theme="dark"] .light-icon {
+        opacity: 1;
+    }
+
+    [data-theme="dark"] .dark-icon {
+        opacity: 0;
+    }
+}
+
+/* Download button styles */
+.download-button-wrapper {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.download-button {
+    width: 136px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .theme-switch-wrapper {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+
+    .theme-switch {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        padding: 12px;
+        justify-content: center;
+    }
+
+    .switch-handle {
+        display: none !important;
+    }
+
+    .theme-icon {
+        width: 24px !important;
+        height: 24px !important;
+        position: absolute;
+    }
+
+    .download-button-wrapper {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+    }
+
+    .download-button {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        padding: 12px;
+    }
+
+    .download-text {
+        display: none !important;
+    }
+
+    .download-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 380px) {
+    .theme-switch,
+    .download-button {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .theme-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .download-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .theme-switch-wrapper,
+    .download-button-wrapper {
+        bottom: 15px !important;
+    }
+}
+
+/* Rest of your existing CSS with some dark theme adjustments */
+
+[data-theme="dark"] body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .container {
+    background-color: var(--section-bg);
+}
+
+[data-theme="dark"] section {
+    background-color: var(--section-bg);
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+[data-theme="dark"] .project,
+[data-theme="dark"] .job {
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.1), transparent);
+}
+
+[data-theme="dark"] .project:hover,
+[data-theme="dark"] .job:hover {
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.15), transparent);
+}
+
+[data-theme="dark"] .skills-group li {
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.1), transparent);
+}
+
+[data-theme="dark"] .hobbies li {
+    background-color: var(--section-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] a {
+    color: var(--accent-color);
+}
+
+/* Dark mode icon colors */
+[data-theme="dark"] .icon:not(.link-icon):not(.video-icon):not(.linkedin-icon) {
+    filter: brightness(0) invert(1) opacity(0.9);
+}
+
+/* Education section dark mode styles */
+[data-theme="dark"] .degree,
+[data-theme="dark"] .school {
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .degree h3,
+[data-theme="dark"] .school h3 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .degree li,
+[data-theme="dark"] .school p {
+    color: var(--text-light);
+}
+
+/* Theme Switch specific transitions */
+.theme-switch {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.switch-handle {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.theme-icon {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Update dark theme variables for better contrast */
+:root[data-theme="dark"] {
+    --primary-color: #64b5f6;
+    --secondary-color: #42a5f5;
+    --accent-color: #2196f3;
+    --text-color: #e0e0e0;
+    --text-light: #b0b0b0;
+    --border-color: #424242;
+    --background-light: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --gradient-start: #1a1a1a;
+    --gradient-end: #2c2c2c;
+    --section-bg: #2c2c2c;
+    --header-text: #ffffff;
+}
+
+/* Ensure consistent transitions for hover effects */
+.project:hover,
+.job:hover,
+.hobbies li:hover,
+.profile:hover,
+.contact-details a:hover,
+.icon:hover {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Update LinkedIn icon for dark mode while preserving its color */
+[data-theme="dark"] .linkedin-icon {
+    filter: brightness(1.2);
+}
+
+/* Preserve specific icon colors in dark mode */
+[data-theme="dark"] .project h3 .link-icon {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(1000%) hue-rotate(180deg) brightness(100%) contrast(101%);
+}
+
+[data-theme="dark"] .project h3 .video-icon {
+    filter: brightness(0) saturate(100%) invert(60%) sepia(75%) saturate(2000%) hue-rotate(330deg) brightness(100%) contrast(97%);
+}
+
+/* Ensure smooth background transitions */
+.project,
+.job,
+section,
+.container,
+body {
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Preserve original colors for specific icons in both themes */
+.gmail-icon,
+[data-theme="dark"] .gmail-icon {
+    filter: none !important;  /* Gmail's original red color */
+}
+
+.linkedin-icon,
+[data-theme="dark"] .linkedin-icon {
+    filter: none !important;  /* LinkedIn's original blue color */
+}
+
+/* Dark mode icon colors - excluding specific icons */
+[data-theme="dark"] .icon:not(.link-icon):not(.video-icon):not(.linkedin-icon):not(.gmail-icon) {
+    filter: brightness(0) invert(1) opacity(0.9);
+}
+
+/* Education section dark mode styles with faster transitions */
+[data-theme="dark"] .degree,
+[data-theme="dark"] .school {
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] .degree h3,
+[data-theme="dark"] .school h3,
+[data-theme="dark"] .degree p,
+[data-theme="dark"] .school p,
+[data-theme="dark"] .degree li {
+    transition: color 0.3s ease;
+}
+
+/* Update contact section transitions */
+.contact-details {
+    transition: color 0.3s ease;
+}
+
+.contact-details p {
+    transition: color 0.3s ease;
+}
+
+/* Download Button Styles */
+.download-button-wrapper {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.download-button {
+    width: 136px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.download-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.download-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover .download-icon {
+    transform: translateY(2px);
+}
+
+/* Dark mode styles for download button */
+[data-theme="dark"] .download-button {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .download-button:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Light mode styles for download button */
+[data-theme="light"] .download-button {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .download-icon {
+    filter: brightness(0);
+}
+
+[data-theme="light"] .download-button:hover {
+    background: rgba(0, 0, 0, 0.15);
+} 
