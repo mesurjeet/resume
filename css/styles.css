@@ -13,9 +13,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
-    transform: none !important;
+    transition: background-color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 body {
@@ -43,8 +42,9 @@ header {
     margin-bottom: 20px;
 }
 
-h1, h2, h3, p, li, a {
-    transition: color 0.3s ease !important;
+/* Text transitions */
+h1, h2, h3, p, li, a, span, .job-title, .duration, .company, .location, .highlight {
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 h1 {
@@ -94,18 +94,19 @@ h2 {
     border-color: var(--primary-color);
     padding-bottom: 8px;
     font-weight: 600;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 /* Contact section */
 .contact-details p,
 .contact-details a,
+.contact-details span,
 .degree h3,
 .degree p,
 .degree li,
 .school h3,
 .school p {
-    transition: color 0.3s ease;  /* Faster transition for text */
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 .contact-details p {
@@ -148,6 +149,7 @@ h2 {
     margin-bottom: 8px;
     color: var(--primary-color);
     font-weight: 600;
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 .degree ul {
@@ -159,6 +161,7 @@ h2 {
     margin-bottom: 5px;
     color: var(--text-light);
     font-size: 0.95rem;
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 /* Technical Skills section */
@@ -650,13 +653,17 @@ h2 {
     margin-bottom: 10px;
 }
 .job-title{
-    font-weight: 500;
+    font-weight: 800;
     color: var(--job-title);
     margin-bottom: 8px;
+    font-style: italic;
 }
 .job-description{
     line-height: 1.55;
     margin-top: 13px;
+}
+#day-icon{
+    margin-left: 2px;
 }
 /* Theme variables */
 :root[data-theme="light"] {
@@ -696,9 +703,6 @@ h2 {
 }
 
 /* Theme Switch Styles */
-#day-icon{
-    margin-left: 2px;
-}
 .theme-switch-wrapper {
     position: fixed;
     top: 20px;
@@ -721,6 +725,7 @@ h2 {
     -webkit-backdrop-filter: blur(12px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .theme-icon {
@@ -742,6 +747,11 @@ h2 {
     top: 50%;
     margin-top: -19.5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+[data-theme="dark"] .switch-handle {
+    left: 91px;
 }
 
 /* Desktop theme icon visibility */
@@ -939,15 +949,11 @@ h2 {
 
 /* Theme Switch specific transitions */
 .theme-switch {
-    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-.switch-handle {
-    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: background-color 0.3s ease;
 }
 
 .theme-icon {
-    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: opacity 0.3s ease;
 }
 
 /* Update dark theme variables for better contrast */
@@ -1134,121 +1140,4 @@ body {
 
 [data-theme="dark"] .highlight:hover {
     background-color: rgba(100, 181, 246, 0.15);
-}
-
-/* Remove all transform transitions from global styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease,
-                color 0.3s ease;
-}
-
-/* Remove transitions from sections */
-section {
-    margin-bottom: 35px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px var(--shadow-color);
-}
-
-/* Update project and job base styles */
-.project, .job {
-    margin-bottom: 25px;
-    padding: 25px;
-    border-radius: 12px;
-    background: linear-gradient(to right, rgba(41,98,255,0.03), transparent);
-    transition: background 0.3s ease;
-}
-
-/* Remove all transform properties */
-.project:hover,
-.job:hover,
-.hobbies li:hover,
-.profile:hover,
-.icon:hover,
-.project h3 img.icon:hover,
-.project h3 .link-icon:hover,
-.project h3 .video-icon:hover,
-.linkedin-icon:hover,
-.download-button:hover,
-.download-button:hover .download-icon {
-    transform: none !important;
-}
-
-/* Update transitions */
-.project,
-.job,
-section,
-.container,
-body {
-    transition: background-color 0.3s ease;
-}
-
-/* Remove transform from theme switch */
-.switch-handle {
-    width: 39px;
-    height: 39px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 6px;
-    top: 50%;
-    margin-top: -19.5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-[data-theme="dark"] .switch-handle {
-    left: 91px;
-}
-
-/* Ensure no movement in dark theme */
-[data-theme="dark"] .project:hover,
-[data-theme="dark"] .job:hover {
-    transform: none !important;
-}
-
-/* Remove all cubic-bezier transitions */
-.theme-switch,
-.switch-handle,
-.theme-icon,
-.icon {
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-/* Ensure no transforms on hover for any element */
-*:hover {
-    transform: none !important;
-}
-
-/* Update project and job hover effects to only change background */
-.project:hover,
-.job:hover {
-    background: linear-gradient(to right, rgba(41,98,255,0.05), transparent);
-    transform: none !important;
-}
-
-[data-theme="dark"] .project:hover,
-[data-theme="dark"] .job:hover {
-    background: linear-gradient(to right, rgba(33, 150, 243, 0.15), transparent);
-    transform: none !important;
-}
-
-/* Remove all transition properties that might cause movement */
-.project,
-.job,
-section,
-.container,
-body,
-.icon,
-.theme-switch,
-.switch-handle,
-.theme-icon,
-.download-button,
-.profile,
-.hobbies li {
-    transition: background-color 0.3s ease, color 0.3s ease;
-    transform: none !important;
 }
