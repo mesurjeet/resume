@@ -43,7 +43,7 @@ header {
 }
 
 /* Text transitions */
-h1, h2, h3, p, li, a, span, .job-title, .duration, .company, .location, .highlight {
+h1, h2, h3, p, li, a, span, .job-title, .duration, .company, .location, .highlight, .skills-group li {
     transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
@@ -141,6 +141,8 @@ h2 {
     padding: 15px;
     border-radius: 6px;
     background: white;
+    border: 1px solid transparent;
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .degree h3, .school h3 {
@@ -245,8 +247,8 @@ h2 {
     margin-bottom: 25px;
     padding: 25px;
     border-radius: 12px;
-    background: linear-gradient(to right, rgba(41,98,255,0.03), transparent);
-    transition: background 0.3s ease;
+    background: transparent;
+    transition: background 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .job-header {
@@ -652,11 +654,12 @@ h2 {
     color: var(--text-color);
     margin-bottom: 10px;
 }
-.job-title{
+.job-title {
     font-weight: 800;
     color: var(--job-title);
     margin-bottom: 8px;
     font-style: italic;
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 .job-description{
     line-height: 1.55;
@@ -695,6 +698,7 @@ h2 {
     --gradient-end: #2c2c2c;
     --section-bg: #2c2c2c;
     --header-text: #ffffff;
+    --job-title: var(--text-color);
 }
 
 /* Theme transition */
@@ -1033,7 +1037,7 @@ body {
 [data-theme="dark"] .degree p,
 [data-theme="dark"] .school p,
 [data-theme="dark"] .degree li {
-    transition: color 0.3s ease;
+    transition: color 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
 
 /* Update contact section transitions */
@@ -1140,4 +1144,10 @@ body {
 
 [data-theme="dark"] .highlight:hover {
     background-color: rgba(100, 181, 246, 0.15);
+}
+
+/* Remove any duplicate job-title transitions */
+[data-theme="dark"] .job-title {
+    color: var(--job-title);
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
 }
